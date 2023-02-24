@@ -1,0 +1,85 @@
+export interface BooksAPI {
+    numFound:      number;
+    start:         number;
+    numFoundExact: boolean;
+    docs:          Book[];
+    num_found:     number;
+    q:             string;
+    offset:        null;
+}
+
+export interface Book {
+    key:                      string;
+    type:                     Type;
+    seed:                     string[];
+    title:                    string;
+    title_suggest:            string;
+    edition_count:            number;
+    edition_key:              string[];
+    publish_date:             string[];
+    publish_year:             number[];
+    first_publish_year:       number;
+    isbn?:                    string[];
+    last_modified_i:          number;
+    ebook_count_i:            number;
+    ebook_access:             EbookAccess;
+    has_fulltext:             boolean;
+    public_scan_b:            boolean;
+    publisher:                string[];
+    language?:                string[];
+    author_key?:              string[];
+    author_name?:             string[];
+    publisher_facet:          string[];
+    _version_:                number;
+    author_facet?:            string[];
+    number_of_pages_median?:  number;
+    cover_edition_key?:       string;
+    cover_i?:                 number;
+    lccn?:                    string[];
+    publish_place?:           string[];
+    lcc?:                     string[];
+    ddc?:                     string[];
+    ia?:                      string[];
+    ia_collection_s?:         string;
+    lending_edition_s?:       string;
+    lending_identifier_s?:    string;
+    printdisabled_s?:         string;
+    subject?:                 string[];
+    id_goodreads?:            string[];
+    id_librarything?:         string[];
+    ia_box_id?:               string[];
+    subject_facet?:           string[];
+    lcc_sort?:                string;
+    subject_key?:             string[];
+    ddc_sort?:                string;
+    oclc?:                    string[];
+    author_alternative_name?: string[];
+    ia_collection?:           string[];
+    contributor?:             string[];
+    subtitle?:                string;
+    person?:                  string[];
+    place?:                   string[];
+    id_amazon?:               string[];
+    id_overdrive?:            string[];
+    person_key?:              string[];
+    place_key?:               string[];
+    person_facet?:            string[];
+    place_facet?:             string[];
+    first_sentence?:          string[];
+    ia_loaded_id?:            string[];
+    time?:                    string[];
+    time_facet?:              string[];
+    time_key?:                string[];
+    id_alibris_id?:           string[];
+    id_better_world_books?:   string[];
+    id_google?:               string[];
+    id_hathi_trust?:          string[];
+    id_isfdb?:                string[];
+    id_librivox?:             string[];
+    id_project_gutenberg?:    string[];
+    id_standard_ebooks?:      string[];
+}
+
+export type EbookAccess = "no_ebook" | "borrowable" | "public" | "printdisabled";
+
+export type Type = "work";
